@@ -1,3 +1,6 @@
+from .api.b2c import BusinessToCustomer
+from .api.c2b import CustomerToBusiness
+
 
 class Mpesa:
     def __init__(self, key=None, secret=None, environment="SANDBOX", cert_path=None, password=None) -> None:
@@ -9,7 +12,13 @@ class Mpesa:
 
 
     def __get_auth_token(self) -> str:
-        pass
+        return ""
 
     def __generate_credential(self) -> str:
-        pass
+        return ""
+
+    def c2b(self):
+        return CustomerToBusiness()
+
+    def b2c(self):
+        return BusinessToCustomer()
